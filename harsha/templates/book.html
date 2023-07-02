@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>xaptured</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'book.css' %}" />
+    <script
+      src="https://kit.fontawesome.com/dbed6b6114.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="nav-section">
+        <div class="brand-and-navBtn">
+          <span class="brand-name"> xaptured_111 </span>
+          <span class="navBtn flex">
+            <i class="fas fa-bars"></i>
+          </span>
+        </div>
+
+        <!-- navigation menu -->
+        <nav class="top-nav">
+          <ul>
+            <li><a href = "/" class = "active">Home</a></li>
+            <li><a href = "/gallery">Gallery</a></li>
+            <li><a href = "/package">Package</a></li>
+            <li><a href = "/booking">Book</a></li>
+          </ul>
+        </nav>
+        <span class="search-icon">
+          <i class="fas fa-search"></i>
+        </span>
+      </div>
+
+      <div class="container about">
+        <div class="about-content">
+          <div class="about-img flex">
+            <img src="downloadd.jpg" alt="photographer img" />
+          </div>
+          <h2>Book your next photoshoot!</h2>
+          <h3> <b> About your Photographer</h3>
+          <blockquote>
+            Hi, I'm Harsh Jaiswal my focus is on capturing the beauty of the world around us through the lens of a camera. I have a keen eye for composition, lighting, and color, and am always looking for new and creative ways to tell a story through my photographs.
+
+I specialize in a variety of photography genres, including landscape, portrait, wildlife, and street photography. I am also experienced in working with models, and am comfortable in a wide range of settings, both indoors and outdoors.
+
+I am passionate about photography and am always looking to learn new techniques and improve my skills. I am a dedicated professional who is committed to providing high-quality, visually-stunning photographs to my clients.
+
+I am always open to new projects and collaborations, and I am ready to take on any challenge, big or small. If you are looking for a professional, experienced photographer, please feel free to contact me.
+          </blockquote>
+        </div>
+
+        <div class="social-icons">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100026465912311"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/home"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/hxrxshhh/?igshid=ZmZhODViOGI%3D"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://in.pinterest.com/"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- main -->
+    <section class="section-five">
+      <div class="container">
+        <div class="contact-top">
+          <h3>CONTACT ME</h3>
+          <p>Hey! I'm Harsh Jaiswal</p>
+        </div>
+
+        <div class="contact-middle">
+          <div>
+            <span class="contact-icon">
+              <i class="fas fa-map-signs"></i>
+            </span>
+            <span>Address</span>
+            <p>Main Street - 3/607 Vastu Khand Gomti Nagar Lucknow</p>
+          </div>
+
+          <div>
+            <span class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </span>
+            <span>Contact Number</span>
+            <p>9794545008</p>
+          </div>
+
+          <div>
+            <span class="contact-icon">
+              <i class="fas fa-paper-plane"></i>
+            </span>
+            <span>Email Address</span>
+            <p>cyber.harshjaiswal@gmail.com</p>
+          </div>
+
+          <div>
+            <span class="contact-icon">
+              <i class="fas fa-globe"></i>
+            </span>
+            <span>Website</span>
+            <p>www.xaptured.com</p>
+          </div>
+        </div>
+
+        <div class="contact-bottom">
+          <form class="form" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Your Name" name="fname" />
+            <input type="email" placeholder="Your Email" name="mailid" />
+            <input type="text" placeholder="Phone" name="phno" />
+            <div class="Harsh-2002">
+            <label for="package">Select Package:</label>
+            <select id="package"  name="package">
+              <option value="option1">MINI-1000 INR</option>
+              <option value="option2">Basic-1500 INR</option>
+              <option value="option3">CLASSIC- 2000 INR</option>
+              <option value="option3">STORY- 2500</option>
+              <option value="option3">CREATE YOUR OWN</option>
+            </select>
+            <label for="date">Date:</label>  
+        <input type="date" id="date" name="date" required> </div>
+            <textarea
+              rows="9"
+              placeholder="Tell us more about yourself.."
+              name="message"
+            ></textarea>
+            <input type="submit" class="btn" value="Send Message" />
+          </form>
+
+          <!-- Map -->
+          <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227822.5503578339!2d80.80242639237173!3d26.84862299335049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f32b16b%3A0x93ccba8909978be7!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1674478949735!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </section>
+    <!-- end of main -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container container">
+        <div>
+          <h2>Harsh Jaiswal</h2>
+          <p>
+            "Welcome to the contact page of our photography website! We are
+            always happy to hear from our visitors and clients. If you have any
+            questions, comments, or would like to inquire about our services,
+            please don't hesitate to reach out to us. Our contact information is
+            provided below. You can also use our contact form to send us a
+            message. We will respond to your inquiry as soon as possible. Thanks
+            for visiting our website and we look forward to hearing from you!"
+          </p>
+        </div>
+        <div>
+          <h3>Free Subscription!</h3>
+          <p>
+            "Welcome to our free subscription website! We are excited to offer
+            our users access to a wide range of content and features without any
+            cost. Our mission is to provide valuable and interesting information
+            to our users without any financial burden. We believe that
+            information and knowledge should be accessible to everyone, and our
+            free subscription model allows us to do just that. With our website,
+            users can access a variety of content including articles, videos,
+            and more. Sign up now and start exploring all that our website has
+            to offer!"
+          </p>
+
+          <div class="subs">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email Address" />
+            <button type="submit">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+      <p>&copy; Copyright hxrxshhh.. SIMPLE AND NICE TEMPALTE</p>
+    </footer>
+    <!-- end of footer -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
